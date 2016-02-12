@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Javascript Object Generator</title>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+  </head>
+  <body>
+    <div id='menu'><button onclick='document.getElementById("why").className=(document.getElementById("why").className=="hidden"?"bouncein":"hidden")' type='button'>Why?</button></div>
+    <div class='hidden' id='why'>
+      <p>I was working on a project where I would filter a list of Javascript objects based on a set of criterias, but it was too boring to write test data by hand, and so this little tool was born.</p>
+      <p>The intended usage of this tool is to create an array of Javascript-objects that can be copypasted into another project to be used as test-data, instead of requiring the actual data before you necessarily have it. I couldn't find any tools online that did this already, so I just made it.</p>
+    </div>
+    <div class='extjsrow'>
+      <input type='text' name='extjs' id='extjs' placeholder='external javascript file to load'>
+      <button type='button' id='loadextjs'>Load</button>
+    </div>
+    <form id='form'>
+      <fieldset>
+        <legend>Number of objects to generate:</legend>
+        <input name='objs' id='objs' type='range' value='50' min='1' max='100' step='1' oninput='objsOut.value=objs.value'>
+        <output for='objs' id='objsOut'>50</output>
+      </fieldset>
+      <div class='row'>
+        <input type='text' name='param' placeholder='parameter'>
+        <textarea placeholder='javascript-function for generating value' class='js' cols='100' rows='3'></textarea>
+      </div>
+    </form>
+    <button id='plus'>Add property row</button>
+    <button type='button' id='go'>Go</button>
+    <textarea class='hidden' id='result'></textarea>
+    <script src='jsobj.js'></script>
+  </body>
+</html>
