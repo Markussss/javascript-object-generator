@@ -1,0 +1,41 @@
+.row input, output {
+  vertical-align: top;
+}
+#result {
+  width: 100%;
+}
+.hidden {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+#why.hidden {
+  visibility: visible;
+  display: none;
+  opacity: 1;
+}
+
+#why {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -200px;
+  width: 378px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#menu {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.fadeIn {
+  visibility: visible;
+  height: 600px;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
